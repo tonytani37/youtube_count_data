@@ -26,16 +26,14 @@ jobs:
           python -m pip install --upgrade pip
           # 必要なパッケージインストール
           pip install requests
-          # pip install json
           pip install google_api_python_client
       - name: Run script
         env:
           youtube_key : ${{ secrets.youtube_key }}
-          # CHANNEL_ACCESS_TOKEN: "token"
-#           USER_ID: "id"
         run: |
           # pythonコードの実行
           python youtube_data_get.py
+          # githubリポジトリへファイルをpushする
           git config --global user.email "vka77606@gmail.com"
           git config --global user.name "tonytani37"
           git add nogi.json

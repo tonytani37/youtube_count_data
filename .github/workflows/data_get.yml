@@ -1,0 +1,43 @@
+# ワークフロー名
+name: youtube_data_get
+
+# 発火タイミング
+on:
+  schedule:
+    - cron: '5 14 * * *'
+  workflow_dispatch:
+jobs:
+  build:
+    # Ubuntuの最新版環境内で処理
+    runs-on: ubuntu-latest
+
+    # 実行する処理＆コマンド指定
+    steps:
+#     - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.11
+#      uses: actions/setup-python@v1
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+      - name: Install dependencies
+        run: |
+          # pip更新
+          python -m pip install --upgrade pip
+          # 必要なパッケージインストール
+          pip install requests
+          # pip install json
+          pip install google_api_python_client
+      - name: Run script
+        env:
+          youtube_key : ${{ secrets.youtube_key }}
+          # CHANNEL_ACCESS_TOKEN: "token"
+#           USER_ID: "id"
+        run: |
+          # pythonコードの実行
+          python youtube_data_get.py
+          git config --global user.email "vka77606@gmail.com"
+          git config --global user.name "tonytani37"
+          git add nogi.json
+          git commit -m "json commit"
+          git push

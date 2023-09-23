@@ -13,7 +13,7 @@ Github Actionsを使い、Pythonで書いたスクリプトで収集したデー
 
 ３．pushされるレジストリは、Actionsを動かした（ymlファイルが登録されている）レジストりのこと。
 
-4.pushされたファイルはレジストリのrootに置かれる。
+４．pushされたファイルはレジストリのrootに置かれる。
 
 
 settingのsecrets and variablesのActions secrets and variablesのsecretsに

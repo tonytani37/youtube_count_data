@@ -27,6 +27,7 @@ jobs:
           # 必要なパッケージインストール
           pip install requests
           pip install google_api_python_client
+          pip install pandas
       - name: Run script
         env:
           youtube_key : ${{ secrets.youtube_key }}
@@ -38,4 +39,8 @@ jobs:
           git config --global user.name "tonytani37"
           git add nogi.json
           git commit -m "json commit"
+          git push
+          python json2csv.py
+          git add nogi.csv
+          git commit -m "csv commit"
           git push

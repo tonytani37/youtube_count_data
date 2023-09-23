@@ -1,14 +1,19 @@
 ## youtubeの動画再生回数を取得してJSONファイルにログとして記録する
 
 APIを使って取得したyoutubeの指定動画の再生回数等情報を、jsonファイルとしてログに残す処理です。
+
 Github Actionsを使い、Pythonで書いたスクリプトで収集したデータをjsonファイルにし、
 それをActionsでgitをつかってレジストリにpushする一連の処理を実行
 
 ポイントは
 １．pythonで出力したrootは実行環境内でのrootのため、Actionsの実行が完了すると消えてしまう。
+
 ２．そのためpythonスクリプトの実行直後にgitでpushする。
-３．pushされるレジストリは、Actionsを動かした（ymlファイルが登録されている）レジストり
+
+３．pushされるレジストリは、Actionsを動かした（ymlファイルが登録されている）レジストりのこと。
+
 4.pushされたファイルはレジストリのrootに置かれる。
+
 
 settingのsecrets and variablesのActions secrets and variablesのsecretsに
 youtube api用のキー情報を登録すれば、ソースを見てもキーは見えない。

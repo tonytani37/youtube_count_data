@@ -6,6 +6,7 @@ Github Actionsを使い、Pythonで書いたスクリプトで収集したデー
 それをActionsでgitをつかってレジストリにpushする一連の処理を実行
 
 ポイントは
+
 １．pythonで出力したrootは実行環境内でのrootのため、Actionsの実行が完了すると消えてしまう。
 
 ２．そのためpythonスクリプトの実行直後にgitでpushする。

@@ -2,9 +2,12 @@ import json
 import requests
 import pandas as pd
 
-url = 'https://raw.githubusercontent.com/tonytani37/youtube_count_data/main/nogi.json'
+# url = 'https://raw.githubusercontent.com/tonytani37/youtube_count_data/main/nogi.json'
 
-jdata = json.loads(requests.get(url).text)
+# jdata = json.loads(requests.get(url).text)
+
+with open('./nogi.json') as f:
+    jdata = json.load(f)
 
 fm = "2023-09-01"
 # to = "2023-09-30"

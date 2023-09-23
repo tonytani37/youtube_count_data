@@ -15,7 +15,8 @@ youtube api用のキー情報を登録すれば、ソースを見てもキーは
 
 その場合、ymlファイルとpythonスクリプトには以下のように記述すること。
 
-Actions secrets and variablesのsecrets名: youtube_key
+Actions secrets and variablesのsecretsで指定した名前
+　youtube_key
 
 ymlファイル内の記述
 ```

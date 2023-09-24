@@ -35,8 +35,8 @@ jobs:
           # pythonコードの実行
           python youtube_data_get.py
           # githubリポジトリへファイルをpushする
-          # git config --global user.email "vka77606@gmail.com"
-          # git config --global user.name "tonytani37"
+          git config --global user.email "vka77606@gmail.com"
+          git config --global user.name "tonytani37"
           git add nogi.json
           git commit -m "json commit"
           git push

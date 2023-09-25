@@ -4,7 +4,7 @@ name: youtube_data_get_s
 # 発火タイミング
 on:
   schedule:
-    - cron: '45 13 * * *'
+    - cron: '45 * * * *'
   workflow_dispatch:
 jobs:
   build:

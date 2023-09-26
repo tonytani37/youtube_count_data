@@ -38,5 +38,5 @@ jobs:
           git config --global user.email "vka77606@gmail.com"
           git config --global user.name "tonytani37"
           git add sakura.json
-          git commit -m "json commit"
+          git commit -m "sakura commit"
           git push

@@ -30,6 +30,7 @@ members = {
 # APIキーを設定
 api_key = os.environ['youtube_key']
 
+json_file = 'hinata.json'
 
 def Youtube_Data_Set(yymmdd):
 # YouTube Data APIのリソースを取得
@@ -58,9 +59,9 @@ yymmdd = datetime.now(timezone(timedelta(hours=+9))).strftime('%Y-%m-%d %H:%M:%S
 # yymmdd = "2023-09-23" # テスト用に日付を強制設定してる
 data = Youtube_Data_Set(yymmdd) # Youtubeからデータを引っ張ってきてjsonフォーマットに整形する
 
-if os.path.exists('./hinata.json'): # ファイルが存在する場合にはそいつを読み込んで日付キーで要素を追加する
+if os.path.exists('./'+json_file): # ファイルが存在する場合にはそいつを読み込んで日付キーで要素を追加する
             try:
-                        with open('./hinata.json', 'r') as f:
+                        with open('./'+json_file, 'r') as f:
                             log_json = json.load(f)
                         log_json[yymmdd] = data
             except Exception as e:
@@ -69,7 +70,7 @@ else:
             log_json = { yymmdd : data } # ファイルが無いときには新規で作る
 
 try:
-            with open('./hinata.json','w') as f:
+            with open('./'+json_file,'w') as f:
                         json.dump(log_json,f)
 except FileNotFoundError:
     print("指定したファイルが見つかりません。")

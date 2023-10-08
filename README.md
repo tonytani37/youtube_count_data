@@ -7,9 +7,9 @@ Github Actionsを使い、Pythonで書いたスクリプトで収集したデー
 
 ポイントは
 
-１．pythonで出力したrootは実行環境内でのrootのため、Actionsの実行が完了すると消えてしまう。
+１．pythonがファイルを出力したrootはあくまで実行環境内でのrootのため、Actionsの実行が完了すると消えてしまう。
 
-２．そのためpythonスクリプトの実行直後にgitでpushする。
+２．そのためpythonスクリプトの実行直後にgitでリポジトリへpushする。
 
 ３．pushされるレジストリは、Actionsを動かした（ymlファイルが登録されている）レジストりのこと。
 

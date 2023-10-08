@@ -76,3 +76,5 @@ except PermissionError:
     print("ファイルを開くための適切な権限がありません。")
 except Exception as e:
     print(f"エラーが発生しました: {str(e)}")
+
+print(yymmdd)

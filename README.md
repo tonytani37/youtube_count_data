@@ -3,19 +3,20 @@
 APIを使って取得したyoutubeの指定動画の再生回数等情報を、jsonファイルとしてログに残す処理です。
 
 Github Actionsを使い、Pythonで書いたスクリプトで収集したデータをjsonファイルにし、
-それをActionsでgitをつかってレジストリにpushする一連の処理を実行
+gitコマンドでレジストリのrootにpushする一連の処理を実行
 
 ポイントは
 
-１．pythonがファイルを出力したrootはあくまで実行環境内でのrootのため、Actionsの実行が完了すると消えてしまう。
+１．Github Actionsでpythonがファイルを出力したrootはあくまで実行環境内でのrootのため、Actionsの実行が完了すると消えてしまう。
 
-２．そのためpythonスクリプトの実行直後にgitでリポジトリへpushする。
+２．そのためpythonスクリプトの実行直後にgitでリポジトリへpushする必要がある。
 
 ３．pushされるレジストリは、Actionsを動かした（ymlファイルが登録されている）レジストりのこと。
 
-４．pushされたファイルはレジストリのrootに置かれる。
+４．pushされたファイルはレジストリのrootに置かれる。（パスしていすれば良いかもしれないけどやってない）
 
 
+## 公開レジストリで使う秘密情報の管理の仕方
 settingのsecrets and variablesのActions secrets and variablesのsecretsに
 youtube api用のキー情報を登録すれば、ソースを見てもキーは見えない。
 

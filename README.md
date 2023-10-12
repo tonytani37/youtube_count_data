@@ -16,7 +16,7 @@ gitコマンドでレジストリのrootにpushする一連の処理を実行
 ４．pushされたファイルはレジストリのrootに置かれる。（パスしていすれば良いかもしれないけどやってない）
 
 
-## 公開レジストリで使う秘密情報の管理の仕方
+## 公開レジストリで使う秘密情報の扱い方
 settingのsecrets and variablesのActions secrets and variablesのsecretsに
 youtube api用のキー情報を登録すれば、ソースを見てもキーは見えない。
 

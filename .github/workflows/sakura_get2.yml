@@ -1,0 +1,42 @@
+# ワークフロー名
+name: youtube_data_get_s
+
+# 発火タイミング
+on:
+  schedule:
+    - cron: '15,45 * * * *'
+  workflow_dispatch:
+jobs:
+  build:
+    # Ubuntuの最新版環境内で処理
+    runs-on: ubuntu-latest
+
+    # 実行する処理＆コマンド指定
+    steps:
+#     - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.11
+#      uses: actions/setup-python@v1
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+      - name: Install dependencies
+        run: |
+          # pip更新
+          python -m pip install --upgrade pip
+          # 必要なパッケージインストール
+          pip install requests
+          pip install google_api_python_client
+          pip install pandas
+      - name: Run script
+        env:
+          youtube_key : ${{ secrets.youtube_key }}
+        run: |
+          # pythonコードの実行
+          python youtube_data_get_s2.py
+          # githubリポジトリへファイルをpushする
+          git config --global user.email "vka77606@gmail.com"
+          git config --global user.name "tonytani37"
+          git add sakura_sukima.json
+          git commit -m "sakura_sukima commit"
+          git push

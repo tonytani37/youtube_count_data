@@ -1,5 +1,5 @@
 # ワークフロー名
-name: youtube_data_get_s
+name: youtube_data_get_s2
 
 # 発火タイミング
 on:

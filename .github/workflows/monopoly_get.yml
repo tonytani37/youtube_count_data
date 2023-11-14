@@ -4,7 +4,7 @@ name: monopoly_data_get
 # 発火タイミング
 on:
   schedule:
-    - cron: '0 48 * * *'
+    - cron: '13 48 * * *'
   workflow_dispatch:
 jobs:
   build:

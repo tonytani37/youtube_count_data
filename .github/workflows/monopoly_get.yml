@@ -3,8 +3,8 @@ name: monopoly_data_get
 
 # 発火タイミング
 on:
-  schedule:
-    - cron: '0,30 * * * *'
+  # schedule:
+  #   - cron: '0,30 * * * *'
   workflow_dispatch:
 jobs:
   build:

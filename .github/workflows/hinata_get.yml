@@ -3,8 +3,8 @@ name: youtube_data_get_h
 
 # 発火タイミング
 on:
-  schedule:
-    - cron: '10,35 * * * *'
+  # schedule:
+  #   - cron: '10,35 * * * *'
   workflow_dispatch:
 jobs:
   build:

@@ -54,7 +54,7 @@ def Youtube_Data_Set(yymmdd):
 
 # def Youtube_Log():
 #　日付は日本時間にセットし直しています
-yymmdd = datetime.now(timezone(timedelta(hours=+9))).strftime('%Y-%m-%d')
+yymmdd = datetime.now(timezone(timedelta(hours=+9))).strftime('%Y-%m-%d %H:%M:%S')
 # yymmdd = "2023-09-23" # テスト用に日付を強制設定してる
 data = Youtube_Data_Set(yymmdd) # Youtubeからデータを引っ張ってきてjsonフォーマットに整形する
 

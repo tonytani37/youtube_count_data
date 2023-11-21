@@ -24,7 +24,7 @@ members = {
             # "tFPBGAGQeq0" : '富里',
             # "w2-5lxXST9g" : '奥田',
             # "yNVgr425A1I" : '五百城',
-            "Q9Pr1fTv6wY" : 'monopoly'
+            "qK9k2J-ZkGU" : 'monopoly'
             }
 
 # APIキーを設定

@@ -1,10 +1,10 @@
 # ワークフロー名
-name: monopoly_data_get
+name: someday_data_get
 
 # 発火タイミング
 on:
   schedule:
-    - cron: '0,30 * * * *'
+    # - cron: '0,10,20,30,40,50 * * * *'
   workflow_dispatch:
 jobs:
   build:
@@ -37,10 +37,7 @@ jobs:
           # githubリポジトリへファイルをpushする
           git config --global user.email "vka77606@gmail.com"
           git config --global user.name "tonytani37"
-          git add monopoly.json
-          git commit -m "monopoly commit"
+          git add someday.json
+          git commit -m "someday commit"
           git push
-          # python json2csv.py
-          # git add nogi.csv
-          # git commit -m "csv commit"
-          # git push
+        

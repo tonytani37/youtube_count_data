@@ -33,7 +33,7 @@ jobs:
           youtube_key : ${{ secrets.youtube_key }}
         run: |
           # pythonコードの実行
-          python youtube_data_get_monopoly.py
+          python youtube_data_get_someday.py
           # githubリポジトリへファイルをpushする
           git config --global user.email "vka77606@gmail.com"
           git config --global user.name "tonytani37"

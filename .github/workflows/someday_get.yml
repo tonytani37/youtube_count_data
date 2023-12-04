@@ -4,7 +4,7 @@ name: someday_data_get
 # 発火タイミング
 on:
   schedule:
-    - cron: '5,15,25,35,45,55 * * * *'
+    - cron: '5,35 * * * *'
   workflow_dispatch:
 jobs:
   build:

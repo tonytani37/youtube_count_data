@@ -37,7 +37,7 @@ jobs:
           # githubリポジトリへファイルをpushする
           git config --global user.email "vka77606@gmail.com"
           git config --global user.name "tonytani37"
-          git add 34th_u.json.json
+          git add 34th_u.json
           git commit -m "34th_u commit"
           git push
         

@@ -3,8 +3,8 @@ name: 34th_u_data_get
 
 # 発火タイミング
 on:
-  schedule:
-    - cron: '0,10,20,30,40,50 * * * *'
+  # schedule:
+  #   - cron: '0,10,20,30,40,50 * * * *'
   workflow_dispatch:
 jobs:
   build:
